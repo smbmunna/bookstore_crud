@@ -10,7 +10,7 @@
         <input type="text" name="pages" placeholder="Number of Pages"value="{{$book->pages}}"><br><br>
 
         <input type="hidden" name="_method" value="put">
-        <input type="submit" value="Update Entry">
+        <input class="btn btn-primary shiny" type="submit" value="Update Entry">
 
 
         {{csrf_field()}}
@@ -19,7 +19,7 @@
 
     <form method="post" action="/books/{{$book->id}}">
         <input type="hidden" name="_method" value="delete">
-        <input type="submit" value="'Delete Entry">
+        <input class="btn btn-danger shiny" type="submit" value="'Delete Entry">
 
         {{csrf_field()}}
     </form>

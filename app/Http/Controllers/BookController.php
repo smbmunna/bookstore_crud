@@ -38,6 +38,16 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
+
+        //Validation
+
+        $this->validate($request,[
+            'name'=>'required',
+            'pages'=>'required'
+        ]);
+
+
+        //Database Insert
         Book::create($request->all());
         return redirect('/books');
     }

@@ -16,4 +16,10 @@ Route::get('/', function () {
 });
 
 
-Route::resource('/books','BookController');
+
+Route::group(['middleware'=>'web'],function(){
+    Route::resource('/books','BookController');
+});
+
+
+

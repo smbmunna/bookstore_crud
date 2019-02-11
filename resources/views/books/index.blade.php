@@ -20,13 +20,17 @@
             <td><a href="books/{{$book->id}}">{{$book->id}}</a></td>
             <td><a href="books/{{$book->id}}">{{$book->name}}</a></td>
             <td><a href="books/{{$book->id}}">{{$book->pages}}</a></td>
-            <td><a href="books/{{$book->id}}/edit">Edit</a> </td>
+            <td><a class="btn btn-primary" href="books/{{$book->id}}/edit">Edit</a> </td>
         </tr>
         @endforeach
 
 
         </tbody>
     </table>
+
+    <a class="btn btn-success shiny" href="{{route('books.create')}}">Create a New Record</a>
+
+
 
 
 
